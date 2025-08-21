@@ -15,7 +15,7 @@ const BlogDetails = () => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:3030/api/blog/detail/${id}`, {
+            .get(`https://bloghost-be.onrender.com/api/blog/detail/${id}`, {
                 withCredentials: true
             })
             .then((res) => setBlog(res.data.blog))
@@ -25,7 +25,7 @@ const BlogDetails = () => {
     const handleDelete = async () => {
         if (!window.confirm("Are you sure you want to delete this blog?")) return;
         try {
-            const res = await axios.delete(`http://localhost:3030/api/blog/delete/${id}`, {
+            const res = await axios.delete(`https://bloghost-be.onrender.com/api/blog/delete/${id}`, {
                 withCredentials: true
             });
             alert(res.data.message);
