@@ -15,7 +15,7 @@ const EditBlog = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const res = await axios.get(`http://localhost:3030/api/blog/${id}`, {
+        const res = await axios.get(`https://bloghost-be.onrender.com/api/blog/${id}`, {
           withCredentials: true,
         });
         const { title, author, content, tags } = res.data.blog;
@@ -40,7 +40,7 @@ const EditBlog = () => {
     e.preventDefault();
     try {
       await axios.put(
-        `http://localhost:3030/api/blog/update/${id}`,
+        `https://bloghost-be.onrender.com/api/blog/update/${id}`,
         {
           ...form,
           tags: form.tags.split(',').map(tag => tag.trim())
