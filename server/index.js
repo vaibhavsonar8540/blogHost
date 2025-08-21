@@ -25,7 +25,8 @@ app.use("/api/user/", userRouter)
 app.listen(process.env.PORT || 3000, async () => {
     try {
         await connectTODb();
-        console.log(">>>>>>>>>>>>>>>>>>>> SERVER IS RUNNING <<<<<<<<<<<<<<<<<<<<")
+        console.log(">>>>>>>>>>>>>>>>>>>> SERVER IS RUNNING <<<<<<<<<<<<<<<<<<<<");
+        
     } catch (error) {
         console.log("Error to connect", error)
     }
