@@ -13,7 +13,7 @@ const RegisterForm = () => {
     const handleSubmit = async e => {
         e.preventDefault();
         try {
-            const res = await axios.post("http://localhost:3030/api/user/register", formData);
+            const res = await axios.post("https://bloghost-be.onrender.com/api/user/register", formData);
             alert(res.data.message);
             navigate('/login');
         } catch (err) {
