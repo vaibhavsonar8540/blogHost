@@ -12,7 +12,7 @@ const CreateBlog = () => {
     e.preventDefault();
     try {
       await axios.post(
-        'http://localhost:3030/api/blog/createpost',
+        'https://bloghost-be.onrender.com/api/blog/createpost',
         {
           ...form,
           tags: form.tags.split(',').map(tag => tag.trim()),
