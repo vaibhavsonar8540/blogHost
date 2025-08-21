@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3030"; // Change to your backend URL
+const BASE_URL = "https://bloghost-be.onrender.com"; // Change to your backend URL
 
 const Navbar = () => {
   const [user, setUser] = useState(null);
